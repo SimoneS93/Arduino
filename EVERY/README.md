@@ -2,7 +2,7 @@
 
 ##A library to exec code on time in Arduino
 
-EVERY lets you easily run pieces of code on time with minimal cost (every usage requires about 100 bytes). It is implemented as a macro, not as a function: this means that it is replaced by actual code at compile time (an if-condition), which is good because is fast. On the other side, you completely lose type safety, which means your errors don't get caught on compile time: your code will compile but not work once uploaded!
+EVERY lets you easily run pieces of code on time with minimal cost (every usage requires about 100 bytes). It is implemented as a macro, not as a function: this means that it is replaced by actual code at compile time (an IF-construct), which is good because is fast. On the other side, you completely lose type safety, which means your errors don't get caught on compile time: your code will compile but not work once uploaded!
 
 ###Sample code
 You can find a few examples in the *examples* directory, here's an overview:

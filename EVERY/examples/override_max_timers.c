@@ -1,9 +1,10 @@
 /**
  * EVERY lib example: exec code on several timers
  * extend max number of distinct timers
+ * @author Salerno Simone
  */
  
-#define EVERY_MAX_COUNT 20
+#define EVERY_MAX_COUNT 20 //you can now have 20 distinct timers
 #include "EVERY.h"
 
 void setup() {

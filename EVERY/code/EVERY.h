@@ -27,7 +27,7 @@
   /**
    * Init all timers with current time
    */
-  #define EVERY_INIT() for (unsigned long now = millis(), i = 0; i < EVERY_MAX_COUNT; i++) __EVERY_PAST[i] = now;
+  #define EVERY_INIT() ;__EVERY_NOW = millis(); for (byte i = 0; i < EVERY_MAX_COUNT; i++) __EVERY_PAST[i] = __EVERY_NOW;
   
   /**
    * Check if interval is elapsed since last execution
@@ -35,6 +35,6 @@
    * from 0 to EVERY_MAX_COUNT-1
    * NOTE: (__EVERY_PAST[i] = __EVERY_NOW) >= 0 is a fake condition since __EVERY_NOW is always >= 0. It's used as an inline assignement.
    */
-  #define EVERY(i, interval) (__EVERY_NOW = millis()); if (__EVERY_NOW - __EVERY_PAST[i] >= interval && (__EVERY_PAST[i] = __EVERY_NOW) >= 0)
+  #define EVERY(i, interval) ;__EVERY_NOW = millis(); if (__EVERY_NOW - __EVERY_PAST[i] >= interval && (__EVERY_PAST[i] = __EVERY_NOW) >= 0)
   
 #endif

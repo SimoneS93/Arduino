@@ -8,19 +8,17 @@ EVERY lets you easily run pieces of code on time with minimal cost (every usage 
 You can find a few examples in the *examples* directory, here's an overview:
 
  1. A single timer
- <pre><code>
-    #include "EVERY.h"
+ <pre><code>#include "EVERY.h"
 
-    void setup() {
-      Serial.begin(9600);
-      //init timers
-      EVERY_INIT();
-    }
-
-    void loop() {  
-      EVERY(0, 3000) {
-      Serial.println("3 seconds have passed since last tick");
-    }
-    delay(1);
+  void setup() {
+    Serial.begin(9600);
+    //init timers
+    EVERY_INIT();
   }
-</code></pre>
+
+  void loop() {  
+    EVERY(0, 3000) {
+    Serial.println("3 seconds have passed since last tick");
+  }
+  delay(1);
+}</code></pre>

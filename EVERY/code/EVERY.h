@@ -34,7 +34,9 @@
    * To distinguish between timers, you have to pass a unique timer index
    * from 0 to EVERY_MAX_COUNT-1
    * NOTE: (__EVERY_PAST[i] = __EVERY_NOW) >= 0 is a fake condition since __EVERY_NOW is always >= 0. It's used as an inline assignement.
+   * @param int index : the timer index, from 0 up to EVERY_MAX_COUNT-1
+   * @param int interval : timer's interval in millis
    */
-  #define EVERY(i, interval) ;__EVERY_NOW = millis(); if (__EVERY_NOW - __EVERY_PAST[i] >= interval && (__EVERY_PAST[i] = __EVERY_NOW) >= 0)
+  #define EVERY(index, interval) ;__EVERY_NOW = millis(); if (__EVERY_NOW - __EVERY_PAST[i] >= interval && (__EVERY_PAST[i] = __EVERY_NOW) >= 0)
   
 #endif

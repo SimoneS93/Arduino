@@ -6,6 +6,8 @@
 
 void setup() {
   Serial.begin(9600);
+  
+  //init timers
   EVERY_INIT();
 }
 
@@ -15,7 +17,7 @@ void loop() {
    * @param interval The timer interval
    */
   EVERY(0, 3000) {
-    Serial.println("3 seconds have passed");
+    Serial.println("3 seconds have passed since last tick");
   }
   
   delay(1);

@@ -1,5 +1,6 @@
 /**
  * EVERY lib example: exec a piece of code every N millis
+ * @author Salerno Simone
  */
  
 #include "EVERY.h"

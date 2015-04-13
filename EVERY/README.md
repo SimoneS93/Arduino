@@ -57,3 +57,5 @@ EVERY.h exports a macro names EVERY which accepts two parameters:
   2. *interval*: the timer's interval in millis.
 
 The number of distinct timers you can use if regulated by a constant called *EVERY_MAX_COUNT*, which defaults to 10. You can define it before including the lib to whatever value you need (see *override_max_timers* example).
+
+**To make timers work properly, you MUST call EVERY_INIT() at the end of setup()**

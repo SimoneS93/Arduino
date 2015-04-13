@@ -1,5 +1,6 @@
 /**
  * EVERY lib example: exec code on several timers
+ * @author Salerno Simone
  */
  
 #include "EVERY.h"
@@ -25,8 +26,8 @@ void loop() {
     Serial.println("2 seconds have passed since last tick");
   }
   
-  //another different index
-  EVERY(2, 5000) {
+  //another different index. It doesn't have to be in order
+  EVERY(8, 5000) {
     Serial.println("5 seconds have passed since last tick");
   }
   

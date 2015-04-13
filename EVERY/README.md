@@ -4,7 +4,7 @@
 
 EVERY lets you easily run pieces of code on time with minimal cost (every usage requires about 100 bytes). It is implemented as a macro, not as a function: this means that it is replaced by actual code at compile time (an if-condition), which is good because is fast. On the other side, you completely lose type safety, which means your errors don't get caught on compile time: your code will compile but not work once uploaded!
 
-###How to use
+###Sample code
 You can find a few examples in the *examples* directory, here's an overview:
 
  1. A single timer
@@ -49,3 +49,11 @@ You can find a few examples in the *examples* directory, here's an overview:
    
     delay(1);
 }</code></pre>
+
+
+#How to use
+EVERY.h exports a macro names EVERY which accepts two parameters:
+  1. *index*: the timer's index. This is used to distinguish between timers and ranges from 0 up to EVERY_MAX_COUNT -1 (see below).
+  2. *interval*: the timer's interval in millis.
+
+The number of distinct timers you can use if regulated by a constant called *EVERY_MAX_COUNT*, which defaults to 10. You can define it before including the lib to whatever value you need (see *override_max_timers* example).

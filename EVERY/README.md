@@ -8,7 +8,7 @@ EVERY lets you easily run pieces of code on time with minimal cost (every usage 
 You can find a few examples in the *examples* directory, here's an overview:
 
  1. A single timer
- 
+ <pre><code>
     #include "EVERY.h"
 
     void setup() {
@@ -23,3 +23,4 @@ You can find a few examples in the *examples* directory, here's an overview:
     }
     delay(1);
   }
+</code></pre>

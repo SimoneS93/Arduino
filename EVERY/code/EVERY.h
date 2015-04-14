@@ -37,6 +37,6 @@
    * @param int index : the timer index, from 0 up to EVERY_MAX_COUNT-1
    * @param int interval : timer's interval in millis
    */
-  #define EVERY(index, interval) ;__EVERY_NOW = millis(); if (__EVERY_NOW - __EVERY_PAST[i] >= interval && (__EVERY_PAST[i] = __EVERY_NOW) >= 0)
+  #define EVERY(index, interval) ;__EVERY_NOW = millis(); if (__EVERY_NOW - __EVERY_PAST[index] >= interval && (__EVERY_PAST[index] = __EVERY_NOW) >= 0)
   
 #endif
